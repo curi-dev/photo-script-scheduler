@@ -1,0 +1,44 @@
+ORIENTAÇÕES IMPORTANTES:
+
+1 - Adotar padrão '-UF' (hífen estado) no final dos arquivos para ofertas por estado E '-UF_RE' (hífen estado underline região) 
+no final dos arquivos para ofertas por região
+    -> Deverá ser usado o hífen para separar O MIOLO do estado/região
+    -> Letras em caixa alta para facilitar o processo de automação
+    -> Sinalização do número da foto junto com o estado/ região
+    Ex. 10.25_OFERTAS_SEMANA_HORTIFRUTI-ES_1 (separado por underline)
+       ps. neste caso poderá enviar sem o 1 (pois é o primeiro)
+    Ex. 10.11_OFERTAS_SEMANA_HORTIFRUTI-RJ_RL_2 (a partir da segunda foto enviar com o número. 2 para a segunda e 3 para a terceira)
+    Ex. 10.11_OFERTAS_SEMANA_HORTIFRUTI-MG_JF_3  
+
+2 - Para lojas específicas usar o seguinte padrão:
+    -> 02.10_04_Forms_Nova_Iguaçu_HF-RV1
+    -> 02.10_04_Forms_Nova_Iguaçu_HF-RV2
+    -> 02.10_04_Forms_Nova_Iguaçu_HF-RV3
+    -> 05.07_A_12.07_Itaim-RV1
+    -> 05.07_A_12.07_Santana-RV1
+
+    OBS: É pouco importante a maneira como o período (datas) é indicado no nome do arquivo.
+    O mais importante é que a loja esteja no miolo do nome e o número da foto
+    separado por hífen respeitando a ortografia correta (ç por exemplo).
+
+    OBS2: O fato de uma foto possuir a palavra 'Forms' e outra foto não, não impacta na lógica 
+    de automação.
+
+    OBS3: Se a loja possuir nome composto separar por underline (IMPORTANTE)
+ 
+
+ E AGORA? O QUÊ FAZER?
+
+ - Crie um pasta chamada photos num diretório de sua preferência (a partir de agora você vai baixar as fotos do branding obrigatoriamente nesta pasta)
+ => ISTO JÁ VAI PRONTO NO SCRIPT
+ - O script deverá ficar neste mesmo diretório 
+ - Depois de executar o script será gerada uma pasta da semana correspondente com os arquivos renomeados 
+ - Para ver todos os arquivos gerados entre no arquivo final_report que será gerado na raiz. Lá você vai poder ver:
+     - Nome inicial e final de todos os arquivos (é bom principalmente no começo você fazer essa verificação visual)
+     - Quantidade de arquivos gerados
+     - Hora da geração do relatório
+- Lembre-se de alterar a semana no arquivo semana.js, está bem intuitivo
+- Caso se esqueça, não se preocupe, o próprio script vai gerar um arquivo erro.txt avisando. Isto vai servir para outros possíveis erros também.
+- O script se encarrega de resetar os arquivos de relatório e erro para cada nova execução.
+
+No mais, seja feliz e conte comigo :D
